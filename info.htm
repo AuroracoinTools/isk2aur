@@ -1,0 +1,201 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=IS link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #4F81BD 1.0pt;padding:0cm 0cm 4.0pt 0cm'>
+
+<p class=MsoTitle>Auroracoin QR-CODE calculator</p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This is a simple PHP based QRcode calculator designed for
+AURORACOIN. The calculator was built to eaasily convert amount in ISK (the
+Icelandic Króna)  to Auroracoin value and display a QR code that can be scanned
+by any mobile wallet. <br>
+<br>
+</p>
+
+<p class=MsoNormal>The API can be used to display QRcode in Auroracoin
+straight, or calculated from ISK. The price is calculated from the current
+price on <a href="https://beta.isx.is">ISX</a>, the Icelandic Auroracoin
+currency  exchange market.</p>
+
+<p class=MsoNormal> It is based on two files,  index.php and qrcodegen.php.</p>
+
+<p class=MsoNormal><b><u>Main use:</u></b></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'>The index.php in the main
+directory can be called with no parameters, but you need to paste the address
+into the input field to use it. When only called with an address, it will
+generate a neautral QR code (no value)</p>
+
+<p class=MsoNormal><u>It will take the following GET statements:</u></p>
+
+<p class=MsoNormal><b>address=</b>(Auroracoin address)</p>
+
+<p class=MsoNormal><b>isk=</b>(amount in icelandic Króna)</p>
+
+<p class=MsoNormal><b>addressfield=</b>(yes, no) Default is yes. Set to
+anything else to hide the address input field. Use only when also using
+.address. Get statement)</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Here is an example:<br>
+<a
+href="http://qrcode.auroracoin.tools/?address=AcM8V615AM3dj1Xd93W43RrBMPFznggTgJ&amp;addressfield=no&amp;isk=500">http://qrcode.auroracoin.tools/?address=AcM8V615AM3dj1Xd93W43RrBMPFznggTgJ&amp;addressfield=no&amp;isk=500</a> 
+(this is my Auroracoin Address, please concider a donation if you like my
+creation).</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><u>API:</u></b></p>
+
+<p class=MsoNormal>The qrcodegen.php is used to generate pure PNG image. It can
+then be inserted anywhere you like. the only mandatory Get field is .address.,
+and if called with that only, it will generate a neutral QRcode (no value). </p>
+
+<p class=MsoNormal><u>It will take the following GET statements:</u></p>
+
+<p class=MsoNormal><b>address=(</b>Auroracoin address) <b>This is mandatory. </b>All
+other fields are optional.</p>
+
+<p class=MsoNormal><b>isk=</b>(amount in icelandic Króna) This will be
+calculated to AUR amount using ISX exchange.       </p>
+
+<p class=MsoNormal><b>aur=</b>(amount in Auroracoin) This will be displayed
+straight up with no calculation as AUR. If both .isk. and .aur. statements are
+used, .aur. will be displayed. If both are missing, a neutral QRcode is
+generated.</p>
+
+<p class=MsoNormal><b>qrsize=</b>(width in pixels) defaults to 200. Anything
+below 50 is hard to scan and everything above 2000 is plain stupid :) </p>
+
+<p class=MsoNormal><b>showlabel=</b>(yes, no) Defaults to yes. If set to
+anything else, the label code below the QRcode will be hidden.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Here is an example:<br>
+<a
+href="http://qrcode.auroracoin.tools/qrcodegen.php?aur=25&amp;walletaddress=AcM8V615AM3dj1Xd93W43RrBMPFznggTgJ&amp;qrsize=400&amp;showlabel=yes">http://qrcode.auroracoin.tools/qrcodegen.php?aur=25&amp;walletaddress=AcM8V615AM3dj1Xd93W43RrBMPFznggTgJ&amp;qrsize=400&amp;showlabel=yes</a>
+(this is my Auroracoin Address, please concider a donation if you like my
+creation).</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>You can use plain html code to call my image like this:</p>
+
+<p class=MsoNormal>&lt;img src=&quot;qrcode.auroracoin.tools/qrcodegen.php?aur=25&amp;walletaddress=AcM8V615AM3dj1Xd93W43RrBMPFznggTgJ&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
+
