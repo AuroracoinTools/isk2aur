@@ -10,7 +10,7 @@ use Endroid\QrCode\QrCode;
 $aurvalue = getGet("aur","0.000000");
 $iskvalue = getGet("isk","0.000000");
 $address = getGet("walletaddress","walletaddress_missing");
-$qrcodesize = getGet("qrsize","200");
+$qrcodesize = getGet("qrsize","250");
 $substring = getGet("showlabel","yes");
 
 

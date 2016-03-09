@@ -34,25 +34,25 @@ $addressfield = getGet("addressfield","yes");
       <div align="center">
          <p style="font-size:150%;">ISK to AUR QRcode</p>
          <?php  //display the qr code 
-            echo '<img src="qrcodegen.php?aur='.$aur.'&walletaddress='.$address.'">';
+            echo '<a href="http://insight.auroracoin.tools/address/'.$address.'"  target="_blank"><img src="qrcodegen.php?aur='.$aur.'&walletaddress='.$address.'"></a>';
          ?>
          <form action = "<?php $_PHP_SELF ?>" method = "GET">
 		<?php //hide input field if GET addressfield <> yes
 		if ($addressfield == "yes") {
-                  $string = '<input type = "text" name = "address" pattern="[a-zA-Z0-9]+{20,34}" value = "'.$address.'" size = "34" Title="paste Wallet address here"> <br>';
+                  $string = '<input type = "text" name = "address" pattern="[a-zA-Z0-9]{20,34}" value = "'.$address.'" size = "34" Title="paste Wallet address here"> <br>';
 		  echo $string;
 		} else {
-		   $string = '<input type = "hidden" name = "address" value = "'.$address.'"><input type = "hidden" name = "addressfield" value = "no">';
+		   $string = '<input type = "hidden" name = "address" value = "'.$address.'"><input type = "hidden" name = "addressfield" value = "no"><a href="http://insight.auroracoin.tools/address/'.$address.'"  target="_blank">'.$address.'</a>';
 		   echo $string;
 		}
 		?>
-            ISK: <input type = "float" name = "isk" pattern="[0-9]+([,\.][0-9]+)?" value = "<?php echo $iskvalue ?>" size = "5" Title="Insert amount in Icelandic KRONA"/>
+            ISK: <input type = "float" name = "isk" pattern="[0-9]+([,\.][0-9]+)?" value = "<?php echo $iskvalue ?>" size = "5" Title="Insert amount in Icelandic KRONA" autofocus/>
             <input type = "submit" value = "Display QR-Code" />
          </form>
-         <a href="https://beta.isx.is">ISX</a>
+         <a href="https://beta.isx.is" target="_blank">ISX</a>
          <?php echo " exchange rate: " . $iskaur . "kr./AUR<br>";
                echo "QRcode generated " . date("D j. M Y H:i")."<br>"; ?>
-         <a href="info.htm"> info</a>
+         <a href="info.htm" target="_blank"> info</a>
       </div>
    </body>
 </html>
