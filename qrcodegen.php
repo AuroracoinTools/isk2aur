@@ -20,7 +20,7 @@ if ($aurvalue <> "0.000000"){
         $value = number_format((float)$aurvalue, 6, '.', '');
     } else {
 //get the price from ISX market and store as $isxrate
-         $url = 'https://beta.isx.is/api/stats';
+         $url = 'https://isx.is/api/stats';
          $json = file_get_contents($url);
          $json = json_decode($json);
          $isxrate = $json->stats->last_price;
