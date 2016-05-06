@@ -49,7 +49,7 @@ $addressfield = getGet("addressfield","yes");
             ISK: <input type = "float" name = "isk" pattern="[0-9]+([,\.][0-9]+)?" value = "<?php echo $iskvalue ?>" size = "5" Title="Insert amount in Icelandic KRONA" autofocus/>
             <input type = "submit" value = "Display QR-Code" />
          </form>
-         <a href="https://beta.isx.is" target="_blank">ISX</a>
+         <a href="https://isx.is" target="_blank">ISX</a>
          <?php echo " exchange rate: " . $iskaur . "kr./AUR<br>";
                echo "QRcode generated " . date("D j. M Y H:i")."<br>"; ?>
          <a href="info.htm" target="_blank"> info</a>
